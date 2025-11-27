@@ -1,0 +1,2 @@
+C:\Users\USUARIO\OneDrive\Escritorio\ConsumoAPI2\ConsumoAPI2\ConsumoAPI2.Wasm\publish-wasm\emcc-props.json
+C:\Users\USUARIO\OneDrive\Escritorio\ConsumoAPI2\ConsumoAPI2\ConsumoAPI2.Wasm\publish-wasm\web.config

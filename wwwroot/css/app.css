@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary-color: #6C63FF;
+    --primary-hover: #5a52d5;
+    --secondary-color: #FF6584;
+    --accent-color: #FFC75F;
+    --background-color: #F9F9FC;
+    --text-color: #2D3436;
+    --card-bg: #FFFFFF;
+    --sidebar-bg: #2D3436;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: radial-gradient(#E0E0E0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.btn-success:hover {
+    background-color: #ff4f73;
+    border-color: #ff4f73;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 101, 132, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+
+/* Loading Spinner */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25em;
+}
+
+/* Card Enhancements */
+.card {
+    border-radius: 16px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card-img-top {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}

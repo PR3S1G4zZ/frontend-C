@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ConsumoAPI2.Wasm.props" />
+</Project>

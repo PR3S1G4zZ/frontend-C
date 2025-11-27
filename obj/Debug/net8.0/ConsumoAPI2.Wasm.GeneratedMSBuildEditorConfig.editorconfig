@@ -1,0 +1,57 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = true
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = ConsumoAPI2.Wasm
+build_property.RootNamespace = ConsumoAPI2.Wasm
+build_property.ProjectDir = C:\Users\USUARIO\OneDrive\Escritorio\ConsumoAPI2\ConsumoAPI2\ConsumoAPI2.Wasm\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\USUARIO\OneDrive\Escritorio\ConsumoAPI2\ConsumoAPI2\ConsumoAPI2.Wasm
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Pages/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2VhdGhlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-mc3fomxjlb
+
+[C:/Users/USUARIO/OneDrive/Escritorio/ConsumoAPI2/ConsumoAPI2/ConsumoAPI2.Wasm/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-o0yyn7voub

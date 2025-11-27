@@ -1,0 +1,9 @@
+{
+    "build": {
+        "builder": "NODE_BUILDER"
+    },
+    "deploy": {
+        "startCommand": "npx serve -s publish/wwwroot -p $PORT --single",
+        "restartPolicyType": "ON_FAILURE"
+    }
+}
