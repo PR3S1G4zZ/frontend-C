@@ -109,24 +109,23 @@
     }
 </style>
 
-@code {
-    private List<DogBreed>? allBreeds;
-    private List<DogBreed>? filteredBreeds;
-    private bool isLoading = true;
-    private string searchTerm = "";
-    private bool showToast = false;
+@inject IHttpClientFactory HttpClientFactory
 
+@code {
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            // Fetch breeds from our proxy endpoint which calls TheDogApi
-            allBreeds = await Http.GetFromJsonAsync<List<DogBreed>>("api/dogs");
+            var client = HttpClientFactory.CreateClient("DogAPI");
+            allBreeds = await client.GetFromJsonAsync<List<DogBreed>>("breeds");
             filteredBreeds = allBreeds;
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error loading breeds: {ex.Message}");
+            // Datos de prueba si falla
+            allBreeds = GetSampleBreeds();
+            filteredBreeds = allBreeds;
         }
         finally
         {
@@ -134,39 +133,14 @@
         }
     }
 
-    private void FilterBreeds()
+    private List<DogBreed> GetSampleBreeds()
     {
-        if (string.IsNullOrWhiteSpace(searchTerm))
+        return new List<DogBreed>
         {
-            filteredBreeds = allBreeds;
-        }
-        else
-        {
-            filteredBreeds = allBreeds?
-                .Where(b => b.Name.Contains(searchTerm, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-        }
-    }
-
-    private async Task AddToFavorites(DogBreed breed)
-    {
-        var favorite = new DogFavorite
-        {
-            DogId = breed.Id.ToString(),
-            Name = breed.Name,
-            BreedGroup = breed.BreedGroup,
-            Origin = breed.Origin,
-            ImageUrl = breed.Image?.Url ?? ""
+            new DogBreed { Id = 1, Name = "Affenpinscher", BreedGroup = "Toy", Origin = "Germany", Image = new BreedImage { Url = "https://cdn2.thedogapi.com/images/BJa4kxc4X.jpg" } },
+            new DogBreed { Id = 2, Name = "Afghan Hound", BreedGroup = "Hound", Origin = "Afghanistan", Image = new BreedImage { Url = "https://cdn2.thedogapi.com/images/hMyT4CDXR.jpg" } },
+            new DogBreed { Id = 3, Name = "Labrador Retriever", BreedGroup = "Sporting", Origin = "Canada", Image = new BreedImage { Url = "https://cdn2.thedogapi.com/images/B1uW7l5VX.jpg" } }
         };
-
-        var response = await Http.PostAsJsonAsync("api/favorites", favorite);
-        if (response.IsSuccessStatusCode)
-        {
-            showToast = true;
-            StateHasChanged();
-            await Task.Delay(3000);
-            showToast = false;
-            StateHasChanged();
-        }
     }
+}
 }
