@@ -159,7 +159,7 @@
 
     private async Task LoadFavorites()
     {
-        favorites = await Http.GetFromJsonAsync<List<DogFavorite>>("api/dogs");
+        favorites = await Http.GetFromJsonAsync<List<DogFavorite>>("api/favorites");
     }
 
     private void ShowCreateModal()
@@ -175,7 +175,7 @@
 
     private async Task CreateFavorite()
     {
-        var response = await Http.PostAsJsonAsync("api/dogs", newDog);
+        var response = await Http.PostAsJsonAsync("api/favorites", newDog);
         if (response.IsSuccessStatusCode)
         {
             await LoadFavorites();
@@ -185,7 +185,7 @@
 
     private async Task DeleteFavorite(int id)
     {
-        var response = await Http.DeleteAsync($"api/dogs/{id}");
+        var response = await Http.DeleteAsync($"api/favorites/{id}");
         if (response.IsSuccessStatusCode)
         {
             await LoadFavorites();
